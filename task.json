@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Generar imágenes MurciaGram (mobile y desktop)",
+      "type": "shell",
+      "windows": {
+        "command": "powershell -NoProfile -Command \"New-Item -ItemType Directory -Force -Path 'assets/img' | Out-Null; Get-ChildItem 'assets/raw' -Filter '*.jpg' | ForEach-Object { $base = $_.BaseName; magick $_.FullName -resize 400x -quality 80 (Join-Path 'assets/img' ($base + '-mobile.jpg')); magick $_.FullName -resize 1000x -quality 85 (Join-Path 'assets/img' ($base + '-desktop.jpg')) }\""
+      },
+      "linux": {
+        "command": "mkdir -p assets/img && for f in assets/raw/*.jpg; do base=$(basename \"$f\" .jpg); magick \"$f\" -resize 400x -quality 80 \"assets/img/${base}-mobile.jpg\"; magick \"$f\" -resize 1000x -quality 85 \"assets/img/${base}-desktop.jpg\"; done"
+      },
+      "osx": {
+        "command": "mkdir -p assets/img && for f in assets/raw/*.jpg; do base=$(basename \"$f\" .jpg); magick \"$f\" -resize 400x -quality 80 \"assets/img/${base}-mobile.jpg\"; magick \"$f\" -resize 1000x -quality 85 \"assets/img/${base}-desktop.jpg\"; done"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    }
+  ]
+}

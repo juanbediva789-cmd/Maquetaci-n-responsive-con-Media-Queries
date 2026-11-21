@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>MurciaGram | Patrimonio, Naturaleza y Gastronomía de la Región de Murcia</title>
+  <meta name="description" content="Descubre los municipios, paisajes, historia y sabores de la Región de Murcia en MurciaGram, tu tablero visual de inspiración turística.">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph básico -->
+  <meta property="og:title" content="MurciaGram — Región de Murcia">
+  <meta property="og:description" content="Explora el patrimonio histórico, natural y gastronómico de los municipios murcianos.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+
+  <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <a href="#inicio" class="brand__link">MurciaGram</a>
+    </div>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <ul class="nav-list">
+        <li><a href="#inicio">Explorar</a></li>
+        <li><a href="#patrimonio">Patrimonio</a></li>
+        <li><a href="#naturaleza">Naturaleza</a></li>
+        <li><a href="#gastronomia">Gastronomía</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <aside class="sidebar" aria-label="Filtros y acceso rápido">
+    <h2 class="sidebar__title">Municipios</h2>
+    <ul class="sidebar__list">
+      <li><a href="#lorca">Lorca</a></li>
+      <li><a href="#cartagena">Cartagena</a></li>
+      <li><a href="#caravaca">Caravaca de la Cruz</a></li>
+      <li><a href="#jumilla">Jumilla</a></li>
+      <li><a href="#aguilas">Águilas</a></li>
+      <li><a href="#mula">Mula</a></li>
+    </ul>
+  </aside>
+
+  <main id="inicio" class="gallery-main">
+    <section aria-label="Galería de municipios" class="cards-container">
+      <!-- Tarjeta 1: Lorca -->
+      <article id="lorca" class="card" style="--card-order: 1;">
+        <figure class="card__media">
+          <picture>
+            <source media="(width <= 600px)" srcset="assets/img/lorca-mobile.jpg">
+            <img
+              src="assets/img/lorca-desktop.jpg"
+              alt="Castillo y patrimonio histórico de Lorca, Región de Murcia"
+              loading="eager"
+            >
+          </picture>
+
+          <div class="card__overlay">
+            <p class="card__desc">
+              Conocida como la Ciudad del Sol, destaca por su fortaleza medieval y su Semana Santa declarada de Interés Turístico Internacional.
+            </p>
+            <div class="card__actions">
+              <button
+                type="button"
+                class="btn-like"
+                aria-pressed="false"
+                aria-label="Marcar Lorca como Me gusta"
+              >
+                ♡ Me gusta
+              </button>
+              <a
+                href="https://www.lorca.es"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-external"
+                aria-label="Visitar web oficial de Lorca"
+              >
+                ↗ Web oficial
+              </a>
+            </div>
+          </div>
+        </figure>
+
+        <div class="card__footer">
+          <h2 class="card__title">Lorca</h2>
+          <button type="button" class="btn-action" aria-pressed="false">
+            Guardar en ruta
+          </button>
+        </div>
+      </article>
+
+      <!-- Tarjeta 2: Cartagena -->
+      <article id="cartagena" class="card" style="--card-order: 2;">
+        <figure class="card__media">
+          <picture>
+            <source media="(width <= 600px)" srcset="assets/img/cartagena-mobile.jpg">
+            <img
+              src="assets/img/cartagena-desktop.jpg"
+              alt="Teatro Romano y puerto de Cartagena"
+              loading="lazy"
+            >
+          </picture>
+
+          <div class="card__overlay">
+            <p class="card__desc">
+              Tres milenios de historia mediterránea, arquitectura modernista y yacimientos romanos junto a un puerto natural único.
+            </p>
+            <div class="card__actions">
+              <button type="button" class="btn-like" aria-pressed="false" aria-label="Marcar Cartagena como Me gusta">
+                ♡ Me gusta
+              </button>
+              <a
+                href="https://www.cartagena.es"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-external"
+              >
+                ↗ Web oficial
+              </a>
+            </div>
+          </div>
+        </figure>
+
+        <div class="card__footer">
+          <h2 class="card__title">Cartagena</h2>
+          <button type="button" class="btn-action" aria-pressed="false">
+            Guardar en ruta
+          </button>
+        </div>
+      </article>
+
+      <!-- Tarjeta 3: Jumilla -->
+      <article id="jumilla" class="card" style="--card-order: 3;">
+        <figure class="card__media">
+          <picture>
+            <source media="(width <= 600px)" srcset="assets/img/jumilla-mobile.jpg">
+            <img
+              src="assets/img/jumilla-desktop.jpg"
+              alt="Viñedos y castillo de Jumilla"
+              loading="lazy"
+            >
+          </picture>
+
+          <div class="card__overlay">
+            <p class="card__desc">
+              Tierra de Monastrell, vinos con denominación de origen, paisajes de secano y un castillo coronando el cerro.
+            </p>
+            <div class="card__actions">
+              <button type="button" class="btn-like" aria-pressed="false" aria-label="Marcar Jumilla como Me gusta">
+                ♡ Me gusta
+              </button>
+              <a
+                href="https://www.jumilla.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-external"
+              >
+                ↗ Web oficial
+              </a>
+            </div>
+          </div>
+        </figure>
+
+        <div class="card__footer">
+          <h2 class="card__title">Jumilla</h2>
+          <button type="button" class="btn-action" aria-pressed="false">
+            Guardar en ruta
+          </button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>MurciaGram · Promoción turística de la Región de Murcia</p>
+  </footer>
+</body>
+</html>
